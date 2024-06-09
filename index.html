@@ -134,23 +134,20 @@
                                 <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">Hire Us</a>
 
                                 <script>
-                                document.addEventListener("DOMContentLoaded", function() {
-                                    if (window.innerWidth <= 768) {
-                                    document.querySelector('.first-button').style.display = 'block';
-                                    document.querySelector('.first-button').style.marginBottom = '10px'; // Adjust as needed for spacing
-                                    }
-                                });
-                                
-                                window.addEventListener('resize', function() {
+                                function alignButtons() {
                                     if (window.innerWidth <= 768) {
                                     document.querySelector('.first-button').style.display = 'block';
                                     document.querySelector('.first-button').style.marginBottom = '10px'; // Adjust as needed for spacing
                                     } else {
-                                    document.querySelector('.first-button').style.display = '';
-                                    document.querySelector('.first-button').style.marginBottom = ''; // Adjust as needed for spacing
+                                    document.querySelector('.first-button').style.display = 'inline-block';
+                                    document.querySelector('.first-button').style.marginBottom = '0'; // Reset margin
                                     }
-                                });
+                                }
+
+                                document.addEventListener("DOMContentLoaded", alignButtons);
+                                window.addEventListener('resize', alignButtons);
                                 </script>
+
 
                             </div>
                             <!-- Hero Footer End -->
