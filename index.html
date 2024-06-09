@@ -130,8 +130,28 @@
 
                             <!-- Hero Footer Start -->
                             <div class="hero-footer">
-                                <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">No-cost</a>
+                                <a href="#" class="btn-default wow fadeInUp first-button" data-wow-delay="0.75s">No-cost counsel</a>
                                 <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">Hire Us</a>
+
+                                <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    if (window.innerWidth <= 768) {
+                                    document.querySelector('.first-button').style.display = 'block';
+                                    document.querySelector('.first-button').style.marginBottom = '10px'; // Adjust as needed for spacing
+                                    }
+                                });
+                                
+                                window.addEventListener('resize', function() {
+                                    if (window.innerWidth <= 768) {
+                                    document.querySelector('.first-button').style.display = 'block';
+                                    document.querySelector('.first-button').style.marginBottom = '10px'; // Adjust as needed for spacing
+                                    } else {
+                                    document.querySelector('.first-button').style.display = '';
+                                    document.querySelector('.first-button').style.marginBottom = ''; // Adjust as needed for spacing
+                                    }
+                                });
+                                </script>
+
                             </div>
                             <!-- Hero Footer End -->
                         </div>
